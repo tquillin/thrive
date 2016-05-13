@@ -4,16 +4,21 @@ class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
+    assert_select "title", "Home | Ruby on Rails Thrive App"
+    # assert_select method allows me to teset for the presence of a particular HTML tag assert_select (selector)
   end
 
   test "should get help" do
     get :help
     assert_response :success
+    assert_select "title", "Help | Ruby on Rails Thrive App"
   end
 
   test "should get about" do
     get :about
-    assert_response :success 
+    assert_response :success
+    assert_select "title", "About | Ruby on Rails Thrive App"
   end
+
 
 end
