@@ -1,7 +1,7 @@
 // this arranges for a Sassy CSS file to be processed as Sass.
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+$gray-medium-light: #eaeaea;
 /* universal */
 
 body {
@@ -78,11 +78,9 @@ p{
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid $gray-medium-light;
   color: #777;
-
 }
-
 footer a {
   color: #555;
 }
@@ -102,5 +100,5 @@ footer ul {
 footer ul li {
   float: left;
   margin-left:55px;
-  // padding-left: 15px;
+  /* padding-left: 15px; */
 }

@@ -129,9 +129,29 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "About | Ruby on Rails Thrive App"
   end
-
-
 end
+
+
+CLI: rails generate integration_test site_layout ;
+
+require 'test_helper'
+
+class SiteLayoutTest < ActionDispatch::IntegrationTest
+  # test "the truth" do
+  #   assert true
+  # end
+
+  test "layout links" do
+    get root_path
+    assert_template 'static_pages/home'
+    assert_select "a[href=?]", root_path, count:2
+    assert_select "a[href=?]", help_path
+    assert_select "a[href=?]", about_path
+    assert_select "a[href=?]", contact_path
+  end
+end
+
+
 
 
 * Services (job queues, cache servers, search engines, etc.)
@@ -153,7 +173,7 @@ def string_shuffle(s = "foobar")
 s.split('').shuffle.join.upcase!
 end
 string_shuffle("foobar")
- => "oobfra" 
+ => "oobfra"
 
 
 
