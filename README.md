@@ -178,8 +178,13 @@ end
 string_shuffle("foobar")
  => "oobfra"
 
+Solved this error:
 
+ ERROR["test_should_get_new", UsersControllerTest, 2016-05-16 12:37:44 -0600]
+  test_should_get_new#UsersControllerTest (1463423864.00s)
+ ActiveRecord::RecordNotUnique:         ActiveRecord::RecordNotUnique: SQLite3::ConstraintException: UNIQUE constraint failed: users.email: INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-17 19:13:13', '2016-05-17 19:13:13', 298486374)
 
+ by deleting contents in the fixtures >> users.yml. This was deleted before starting passwords and real close to finishing email uniqueness. 
 
 
 
