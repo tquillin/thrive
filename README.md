@@ -13,6 +13,9 @@ Things you may want to cover:
 * System dependencies
 
 
+config/initializers/secret_token.rb
+config/secrets.yml
+
 
 gem 'rails', '4.2.2'
 gem 'bcrypt',                  '3.1.7'
