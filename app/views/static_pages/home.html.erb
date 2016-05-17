@@ -6,9 +6,36 @@
     <title> <%= full_title(yield(:title))%> </title>
   </head>
   <body>
-<h1>Sample App</h1>
+<!-- <h1>Sample App</h1>
 <p>
   This is the home page for <a href="http://terrellq.com">QT</a>
-</p>
+</p> -->
+
+<div class="center jumbotron">
+    <h1>Welcome to the Sample App </h1>
+
+    <h2>
+      This is the home page for the
+      <a href="http://www.terrellq.com/">Sample App</a>
+    </h2>
+    <%= link_to "Sign up now!", "#", class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails logo"), 'http://www.terrellq.com/'%>
+
+
   </body>
 </html>
+
+
+<!-- <div class="center jumbotron">
+    <h1>Welcome to the Sample App </h1>
+
+    <h2>
+      This is the home page for the
+      <a href="http://www.terrellq.com/">QT</a>
+    </h2>
+    <%= link_to "Sign up now!", "#", class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails logo"), 'http://www.terrellq.com/'%> -->
