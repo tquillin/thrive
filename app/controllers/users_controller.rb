@@ -4,9 +4,20 @@ class UsersController < ApplicationController
   #           GET    /users/new(.:format)      users#new
   #    signup GET    /signup(.:format)         users#new
   def new
+    @user = User.new
   end
   #     users GET    /users(.:format)          users#index
   #           POST   /users(.:format)          users#create
+  def create
+      @user = User.new(user_params) # Not the final implementation!
+        if @user.save
+          flash[:success] = "Welcome to the Sample App!"
+          redirect_to @user #this redirects to the new created user profile on his/her profile page
+          # Handle a successful save.
+        else
+          render 'new'
+        end
+  end
   #  new_user GET    /users/new(.:format)      users#new
   # edit_user GET    /users/:id/edit(.:format) users#edit
 
@@ -24,6 +35,10 @@ class UsersController < ApplicationController
 
   end
 
+  private
 
+    def user_params
+        params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
 
 end
