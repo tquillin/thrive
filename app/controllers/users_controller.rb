@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-
+  #      user GET    /users/:id(.:format)      users#show
+  def show
+    @user = User.find(params[:id])
+    # debugger
+  end
   # users_new GET    /users/new(.:format)      users#new
   #           GET    /users/new(.:format)      users#new
   #    signup GET    /signup(.:format)         users#new
@@ -11,6 +15,7 @@ class UsersController < ApplicationController
   def create
       @user = User.new(user_params) # Not the final implementation!
         if @user.save
+          log_in @user
           flash[:success] = "Welcome to the Sample App!"
           redirect_to @user #this redirects to the new created user profile on his/her profile page
           # Handle a successful save.
@@ -22,18 +27,18 @@ class UsersController < ApplicationController
   # edit_user GET    /users/:id/edit(.:format) users#edit
 
 
-  #      user GET    /users/:id(.:format)      users#show
-  def show
-    @user = User.find(params[:id])
-    # debugger
-  end
+
   #           PATCH  /users/:id(.:format)      users#update
   #           PUT    /users/:id(.:format)      users#update
   #           DELETE /users/:id(.:format)      users#destroy
 
-  def index
+  # def index
+  #
+  # end
 
-  end
+  # def logged_in
+  #
+  # end
 
   private
 
