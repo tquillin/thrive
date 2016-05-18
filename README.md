@@ -13,6 +13,16 @@ Things you may want to cover:
 * System dependencies
 
 
+
+Gravatar documentation:
+    http://en.gravatar.com/site/implement/hash/
+
+Debugging techniques:
+
+debug
+debugger
+byebug 'gem'
+
 config/initializers/secret_token.rb
 config/secrets.yml
 
@@ -184,10 +194,10 @@ Solved this error:
   test_should_get_new#UsersControllerTest (1463423864.00s)
  ActiveRecord::RecordNotUnique:         ActiveRecord::RecordNotUnique: SQLite3::ConstraintException: UNIQUE constraint failed: users.email: INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-05-17 19:13:13', '2016-05-17 19:13:13', 298486374)
 
- by deleting contents in the fixtures >> users.yml. This was deleted before starting passwords and real close to finishing email uniqueness. 
+ by deleting contents in the fixtures >> users.yml. This was deleted before starting passwords and real close to finishing email uniqueness.
 
-
-
+application.html.erb :
+      <%= debug(params) if Rails.env.development?%>
 
 
 
