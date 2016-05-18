@@ -56,9 +56,9 @@ end
     assert_not @user.valid?
   end
 
-  # test "email addresses should be downcase before save" do
-  #   @user.email = @user.email.downcase
-  #   assert
-  # end
+  test "authenticated? should return false for a user with a nil digest" do
+    @user.email = @user.email.downcase
+    assert_not @user.authenticated?('')
+  end
 
 end
