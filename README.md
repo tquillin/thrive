@@ -12,6 +12,7 @@ Things you may want to cover:
 
 * System dependencies
 
+At present, newly registered users immediately have full access to their accounts (Chapter 7). In this section, we’ll implement an account activation step to verify that the user controls the email address they used to sign up. This will involve associating an activation token and digest with a user, sending the user an email with a link including the token, and activating the user upon clicking the link.
 
 
 Gravatar documentation:
