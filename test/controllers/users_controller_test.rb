@@ -23,7 +23,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to login_url
   end
 
-  test "should rediret update when not logged in" do
+  test "should redirect update when not logged in" do
 
       patch :update, id:@user, user: {
         name: @user.name, email: @user.email

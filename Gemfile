@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.2'
+# gem 'rails',
 gem 'bcrypt',                  '3.1.7'
 gem 'faker',                   '1.4.2'
 gem 'carrierwave',             '0.10.0'
@@ -89,7 +89,7 @@ end
 #
 #
 # # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# gem 'rails', '4.2.5.1'
+gem 'rails', '4.2.5.1'
 # # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # # Use SCSS for stylesheets

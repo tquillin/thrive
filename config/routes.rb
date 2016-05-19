@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
 
   get 'sessions/new'
 
@@ -19,7 +20,6 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   # resources :user
-  resources :users
 
   # resources :static_pages
 

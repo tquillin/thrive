@@ -2,9 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
 
-  def index
-    @users = User.all
-  end
+
 
   #      user GET    /users/:id(.:format)      users#show
   def show
@@ -30,6 +28,12 @@ class UsersController < ApplicationController
           render 'new'
         end
   end
+
+  def index
+    @users = User.paginate(page: params[:page])
+    # @users = User.all
+  end
+
   #  new_user GET    /users/new(.:format)      users#new
   # edit_user GET    /users/:id/edit(.:format) users#edit
   def edit
@@ -73,6 +77,6 @@ class UsersController < ApplicationController
   # Confirms the correct user.
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless @user == current_user
+      redirect_to(root_url) unless current_user?(@user)
     end
 end
