@@ -57,8 +57,13 @@ end
   end
 
   test "authenticated? should return false for a user with a nil digest" do
-    @user.email = @user.email.downcase
-    assert_not @user.authenticated?('')
+    assert_not @user.authenticated?(:remember, '')
+    # @user.email = @user.email.downcase
+    # assert_not @user.authenticated?('')
   end
+
+  # test "authenticated? should return false for a user with nil digest" do
+  #   assert_not @user.authenticated?(:remember, '')
+  # end
 
 end
