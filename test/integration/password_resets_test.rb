@@ -15,7 +15,7 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     assert_template 'password_resets/new'
 
     #tests for invalid email
-    post password_resets_path, password_reset: { email: "" }
+    post password_resets_path, password_reset: { email: " " }
     assert_not flash.empty?
     assert_template 'password_resets/new'
 
@@ -30,7 +30,7 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     user = assigns(:user)
 
     #Wrong email
-    get edit_password_reset_path(user.reset_token, email: "")
+    get edit_password_reset_path(user.reset_token, email: " ")
     assert_redirected_to root_url
 
     #Inactive user
@@ -51,21 +51,21 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     #Invalid password & Confirmation
     patch password_reset_path(user.reset_token),
       email: user.email,
-      user: {password:      "foobaz",
+      user: { password:      "foobaz",
              password_confirmation: "barquux" }
-      assert_select 'div#error_explanation'
+      assert_select '<div#error_explanation>'
 
       #Empty password
       patch password_reset_path(user.reset_token),
       email: user.email,
-      user: {password:      "",
-             password_confirmation:       "" }
-      assert_select 'div#error_explanation'
+      user: { password:      " ",
+             password_confirmation:       " " }
+      assert_select '<div#error_explanation>'
 
       #Valid password & confirmation
-      patchh password_reset_path(user.reset_token),
+      patch password_reset_path(user.reset_token),
       email: user.email,
-      user: {password: "foobaz",
+      user: { password: "foobaz",
              password_confirmation: "foobaz" }
       assert is_logged_in?
       assert_not flash.empty?

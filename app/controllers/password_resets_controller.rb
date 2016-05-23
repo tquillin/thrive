@@ -26,7 +26,7 @@ class PasswordResetsController < ApplicationController
       # edit_password_reset GET    /password_resets/:id/edit(.:format)     password_resets#edit
   def edit
   end
-end
+
         #  password_reset PATCH  /password_resets/:id(.:format)          password_resets#update
         #  PUT    /password_resets/:id(.:format)          password_resets#update
 
@@ -64,12 +64,13 @@ end
       unless (@user && @user.activated? && @user.authenticated?(:reset, params[:id]))
         redirect_to root_url
       end
-      end
+    end
 
-#Checks expiration of reset token
-def check_expiration
-  if @user.password_reset_expired?
-    flash[:danger] = "Password reset has expired."
-    redirect_to new_password_reset_url
+  #Checks expiration of reset token
+  def check_expiration
+    if @user.password_reset_expired?
+      flash[:danger] = "Password reset has expired."
+      redirect_to new_password_reset_url
+    end
   end
 end
