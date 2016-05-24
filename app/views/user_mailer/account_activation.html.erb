@@ -3,14 +3,14 @@
 
 
 
-<h1>Ruby on Rails App</h1>
+<h1>Music Life App</h1>
 
 <p>
   Hi <%= @user.name %>,
 </p>
 
 <p>
-  Welcome to the Ruby on Rails App! Click on the link below to activate your account:
+  Welcome to the Music Life App! Click on the link below to activate your account:
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email)%>
