@@ -66,6 +66,12 @@ test "should redirect destroy when logged in as a non-admin" do
   end
 end
 
+  test "should redirect followers when not logged in" do
+    get :followers, id: @user
+    assert_redirected_to login_url
+  end
+end 
+
 # require 'test_helper'
 #
 # class UserControllerTest < ActionController::TestCase
