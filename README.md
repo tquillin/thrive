@@ -200,7 +200,11 @@ Solved this error:
 application.html.erb :
       <%= debug(params) if Rails.env.development?%>
 
+Helpful resources:
 
+https://devcenter.heroku.com/articles/s3#s3-setup
+
+http://www.imagemagick.org/script/index.php
 
 
 
