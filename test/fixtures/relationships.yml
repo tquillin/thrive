@@ -1,15 +1,19 @@
 one:
   follower: tranecia
   followed: lana
+  created_at: <%= 10.minutes.ago %>
 
 two:
   follower: tranecia
   followed: malory
+  created_at: <%= 10.minutes.ago %>
 
 three:
   follower: lana
   followed: tranecia
+  created_at: <%= 10.minutes.ago %>
 
 four:
   follower: archer
-  followed: tranecia 
+  followed: tranecia
+  created_at: <%= 10.minutes.ago %>
