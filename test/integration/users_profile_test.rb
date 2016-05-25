@@ -20,5 +20,4 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
         assert_match micropost.content, response.body #response.body contains the full HTML source of the page.
     end
   end
-
 end
