@@ -1,1 +1,15 @@
-# empty
+one:
+  follower: tranecia
+  followed: lana
+
+two:
+  follower: tranecia
+  followed: malory
+
+three:
+  follower: lana
+  followed: tranecia
+
+four:
+  follower: archer
+  followed: tranecia 
