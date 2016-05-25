@@ -66,10 +66,20 @@ end
     @user.save
     @user.microposts.create!(content: "Lorem ipsum")
     assert_difference 'Micropost.count', -1 do
-      @user.destroy 
+      @user.destroy
     end
   end
 
+  test "should follow and unfollow a user" do
+    tranecia = users(:tranecia)
+    archer = users(:archer)
+    assert_not tranecia.following?(archer)
+    tranecia.follow(archer)
+    assert tranecia.following?(archer)
+    assert archer.followers.include?(tranecia)
+    tranecia.unfollow(archer)
+    assert_not tranecia.following?(archer)
+  end
 end
 
 

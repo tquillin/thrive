@@ -7,10 +7,15 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  resources :users
+  resources :users do #/users/1/following or /users/1/followers following following_user_path(1) and followers followers_user_path(1)
+    member do
+      get :following, :followers
+  end
+end
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 end
 
 
