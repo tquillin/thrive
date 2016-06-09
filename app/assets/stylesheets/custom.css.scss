@@ -256,7 +256,7 @@ aside {
   }
 }
 .users.follow {
-  padding: 0; 
+  padding: 0;
 }
 
 // footer
@@ -287,4 +287,12 @@ footer ul li {
   float: left;
   margin-left:55px;
   /* padding-left: 15px; */
+}
+
+@media (min-width: 400px) {
+  .center-jumbotron {
+    position: relative;
+    top: 5px;
+    width: 50%;
+  }
 }
