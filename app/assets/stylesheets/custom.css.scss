@@ -292,7 +292,66 @@ footer ul li {
 @media (min-width: 400px) {
   .center-jumbotron {
     position: relative;
-    top: 5px;
+    top: 25px;
+    left: 45px;
     width: 50%;
   }
+  .center-jumbotron h1 {
+    // text-align: ;
+    color: blue;
+  }
+  .btn-primary {
+    position: relative;
+    left: 80px;
+  }
+  img {
+    position: relative;
+    top: 60px;
+    left: 10px;
+  }
+  .footer {
+    position: relative;
+    top: 40px;
+  }
+  .navbar-inverse {
+    background-color: lightblue;
+    // position: relative;
+    // top: 70px;
+
+    // width: 50%;
+    ul li {
+      // padding-right: 3px;
+      display: inline-block;
+      // background-color: red;
+
+    }
+  }
+  // .navbar-right ul li {
+  //   color: green;
+  // }
+  .footer ul li {
+    position: relative;
+    right: 200px;
+  }
+  .btn-primarys {
+    position: relative;
+    left: 30px;
+    width: 60%;
+    background-color: blue;
+  }
+  .form-control {
+    width: 68%;
+  }
+  .music {
+    padding-right: 160px;
+  }
+  .login {
+    padding-right: 160px;
+  }
+  .about {
+    padding-right: 160px;
+  }
+  // .contact {
+  //   padding-right: 30%;
+  // }
 }
