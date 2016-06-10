@@ -294,11 +294,12 @@ footer ul li {
     position: relative;
     top: 25px;
     left: 45px;
-    width: 50%;
+    width: 70%;
   }
   .center-jumbotron h1 {
     // text-align: ;
-    color: blue;
+    // color: blue;
+    font-size: 60px;
   }
   .btn-primary {
     position: relative;
@@ -313,16 +314,22 @@ footer ul li {
     position: relative;
     top: 40px;
   }
+  .navbar-right {
+    // color: white;
+    font-size: 15px;
+  }
   .navbar-inverse {
     background-color: lightblue;
     // position: relative;
     // top: 70px;
 
     // width: 50%;
+    color: white;
+
     ul li {
       // padding-right: 3px;
       display: inline-block;
-      background-color: red;
+      // background-color: red
 
     }
   }
@@ -331,27 +338,21 @@ footer ul li {
   // }
   .footer ul li {
     position: relative;
-    right: 200px;
+    right: 15px;
   }
   .btn-primarys {
     position: relative;
-    left: 30px;
     width: 60%;
-    background-color: blue;
+    background-color: $gray-medium-light;
+    &:hover {
+      background-color: blue;
+    }
   }
   .form-control {
-    width: 68%;
+    width: 98%;
   }
   .music {
-    padding-right: 160px;
+    padding-right: 8%;
   }
-  // .login {
-  //   padding-right: 160px;
-  // }
-  // .about {
-  //   padding-right: 160px;
-  // }
-  // .contact {
-  //   padding-right: 30%;
-  // }
+
 }
