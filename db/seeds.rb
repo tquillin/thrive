@@ -1,4 +1,4 @@
-
+# this is how you get around the login system locally.
 User.create!(name:  "Example User",
              email: "choity01@yahoo.org",
              password:              "foobar",
@@ -6,6 +6,7 @@ User.create!(name:  "Example User",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
+
 
 99.times do |n|
   name  = Faker::Name.name
