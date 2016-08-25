@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  resources :users do #/users/1/following or /users/1/followers following following_user_path(1) and followers followers_user_path(1)
+  #/users/1/following or /users/1/followers following following_user_path(1) and followers followers_user_path(1)
+  resources :users do 
     member do
       get :following, :followers
   end

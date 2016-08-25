@@ -13,26 +13,11 @@
 
 <%= render 'layouts/header' %>
 
-<!-- <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-      <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %>
-            <% end %>
-        </div>
-       <%= link_to "sample app", '#', id: "logo"%>  the 'id: "logo"' is a hash : id: is a symbol and also a key, logo is a value. This is optional.
-   <nav> these nav links more clearly communicate the purpose of the navigation links below. Or,these nav links are optional/unnecessary.
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "HHoeqemeome", '#'%></li>
-          <li><%= link_to "Help", '#'%></li>
-          <li><%= link_to "Log in", '#'%></li>
-        </ul>
-      </nav>
-  </div>
-</header> -->
 
 
-<div class="container"> <!--  has special meaning to Bootstrap  -->
-    <%= yield %> <!--  has special meaning to Bootstrap... the yield method inserts the content of each page into the site layout.  -->
+
+<div class="container">
+    <%= yield %> 
 </div>
 
 <%= render 'layouts/footer' %>
