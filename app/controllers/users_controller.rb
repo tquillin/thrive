@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
-    # debugger
   end
   # users_new GET    /users/new(.:format)      users#new
   #           GET    /users/new(.:format)      users#new
@@ -20,11 +19,11 @@ class UsersController < ApplicationController
   #     users GET    /users(.:format)          users#index
   #           POST   /users(.:format)          users#create
   def create
-      @user = User.new(user_params) # Not the final implementation!
+      @user = User.new(user_params)
         if @user.save
           @user.send_activation_email
           flash[:info] = "Please check your email to activate your account."
-          redirect_to root_url #this redirects to the new created user profile on his/her profile page
+          redirect_to root_url
         else
           render 'new'
         end
@@ -32,7 +31,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
-    # @users = User.all
   end
 
   #  new_user GET    /users/new(.:format)      users#new
@@ -47,7 +45,6 @@ class UsersController < ApplicationController
   def update
       @user = User.find(params[:id])
       if @user.update_attributes(user_params)
-        # Handle a successful update.
         flash[:success] = "La profile est mise à jour"
         redirect_to @user
       else
@@ -59,7 +56,7 @@ class UsersController < ApplicationController
     def destroy
       User.find(params[:id]).destroy
       flash[:success] = "User deleted"
-      redirect_to users_url #Only admin can delete now.
+      redirect_to users_url
 
     end
 
