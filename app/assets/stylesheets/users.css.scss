@@ -1,0 +1,90 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.users {
+  color: green;
+}
+// iphone 5 320 568
+@media (min-width: 320px) and (max-width: 568px){
+  .navbar-right {
+    position: relative;
+    left: 50px;
+  }
+  h6 {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+  #new_user {
+    position: relative;
+    top: 30px;
+  }
+.btn-primary {
+  position: relative;
+  left: 0px;
+  top: 5px;
+}
+.footer {
+  // position: absolute;
+  margin-top: 40px;
+}
+.footer, ul, li {
+  position: relative;
+  display: flex;
+}
+}
+
+// galaxy s5 360 640
+@media (min-width: 360px) and (max-width: 640px){
+  .navbar-right {
+    position: relative;
+    left: 30px;
+  }
+}
+// iphone 6 375 667
+@media (min-width: 375px) and (max-width: 667px){
+  .navbar-right {
+    position: relative;
+    left: 40px;
+  }
+  h6 {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  #new_user {
+    position: relative;
+    top: 30px;
+  }
+.btn-primary {
+  position: relative;
+  left: 0px;
+}
+.footer {
+  // position: absolute;
+  margin-top: 20px;
+}
+}
+
+// iphone 6 plus
+@media (min-width: 414px) and (max-width: 736px){
+  .navbar-right {
+    position: relative;
+    left: 90px;
+  }
+  h6 {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  #new_user {
+    position: relative;
+    top: 30px;
+  }
+.btn-primary {
+  position: relative;
+  left: 0px;
+}
+.footer {
+  // position: absolute;
+  margin-top: 440px;
+}
+}

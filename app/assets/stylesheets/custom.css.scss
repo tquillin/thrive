@@ -10,13 +10,13 @@ $gray-medium-light: #eaeaea;
 }
 
 /* miscellaneous */
-.debug_dump {
-  clear:both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
+// .debug_dump {
+//   clear:both;
+//   float: left;
+//   width: 100%;
+//   margin-top: 45px;
+//   @include box_sizing;
+// }
 
 /* universal */
 
@@ -272,10 +272,6 @@ footer a {
 footer a:hover {
   color: #222;
 }
-
-footer small {
-  float: left;
-}
 footer ul {
   float: right;
   list-style: none;
@@ -287,8 +283,47 @@ footer ul li {
   /* padding-left: 15px; */
 }
 
+// iphone 5 320 x 568
+@media (min-width: 320px) and (max-width: 568px) {
+  .navbar-right {
+    position: relative;
+    top: 2px;
+    left: 90px;
+    display: inline-block;
+  }
+}
+
+// galaxy s5 360 640
+@media (min-width: 360px) and (max-width: 640px) {
+  .navbar-right {
+    position: relative;
+    top: 2px;
+    left: 150px;
+    // display: inline-block;
+  }
+}
+// iphone 6 375 x 667
+@media (min-width: 375px) and (max-width: 667px) {
+  .navbar-right {
+    position: relative;
+    top: 2px;
+    left: 160px;
+    display: inline-block;
+  }
+}
+
+// nexus 6p 412 732
+@media (min-width: 412px) and (max-width: 732px) {
+  .navbar-right {
+    position: relative;
+    top: 2px;
+    left: 9px;
+    // display: inline-block;
+  }
+}
+
 // iphone 6 plus
-@media (min-width: 400px) and (max-width: 750px) {
+@media (min-width: 414px) and (max-width: 736px) {
   .container {
     height: 58px;
   }
@@ -298,13 +333,16 @@ footer ul li {
 
   .navbar-right {
     position: relative;
-    top: -15px;
+    top: 15px;
+    left: 30px;
     display: inline-block;
     // width: 100%;
     // text-align: left;
   }
+  footer {
+  margin-top: 240px;
+  }
 }
-
 @media (min-width: 300px) {
   .center-jumbotron {
     position: relative;
@@ -319,7 +357,8 @@ footer ul li {
   }
   .btn-primary {
     position: relative;
-    // left: 5px;
+    left: 25%;
+    // text-align: center;
   }
   img {
     position: relative;

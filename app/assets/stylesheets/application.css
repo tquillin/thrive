@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
- */body {
- /*background-color: lightblue;*/
+ */.navbar-right {
+ position: relative;
+ left: -5px;
 }
