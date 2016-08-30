@@ -244,7 +244,7 @@ aside {
   }
 }
 .user_avatars {
-  overflow: auto;
+  overflow: hidden;
   margin-top: 10px;
   .gravatar {
     margin: 1px 1px;
