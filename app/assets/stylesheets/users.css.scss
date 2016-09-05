@@ -1,9 +1,41 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user_name {
+  position: absolute;
+  top: 130px;
+}
+.users {
+  line-height: 115px;
+  a {
+    position: relative;
+    top: -30px;
+    left: -50px
+  }
+}
+.user {
+  position: relative;
+  left: -50px;
+  top: -10px;
+}
 
+.content{
+  color: black;
+  position: relative;
+  bottom: 20px;
+  // margin-top: -20px;
+}
 
+.timestamp {
+  text-align: right;
+  font-size: 8px;
+}
 
+// alternative to .gravatar
+a > img {
+  position: relative;
+  top: 10px;
+}
 .user_name {
   text-align: right;
 }
@@ -169,7 +201,7 @@ h1 {
 }
 
 .dropdown-menu li{
-  background-color: red;
+  // background-color: red;
   height: 150px;
-  color: red;
+  // color: red;
 }
