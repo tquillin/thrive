@@ -148,14 +148,28 @@ h1 {
   position: relative;
   left: 0px;
 }
-.footer {
-  // position: absolute;
-  margin-top: 440px;
-}
+  .footer {
+    top: 270px;
+    left: 40px;
+  position: fixed;
+  // margin-top: 1000px;
+  // color: red;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .user_name {
     text-align: right;
     font-size: 20px;
   }
+}
+
+.footer {
+  // position: absolute;
+  margin-top: 440px;
+}
+
+.dropdown-menu li{
+  background-color: red;
+  height: 150px;
+  color: red;
 }
