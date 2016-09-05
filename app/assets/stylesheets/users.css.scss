@@ -1,9 +1,33 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user_info {
+  h1 {
+    img {
+      position: relative;
+      left: -5px;
+      // height: 20px;
+    }
+  }
+}
+
+.stats {
+  // position: relative;
+  height: 100px;
+  // width: 100px;
+  a {
+    position: relative;
+    // left: -px;
+    top: 10px;
+  }
+}
+
 .user_name {
-  position: absolute;
-  top: 130px;
+  position: fixed;
+  height: 10px;
+  top: 205px;
+  left: 20px;
+  // background-color: blue;
 }
 .users {
   line-height: 115px;
@@ -34,7 +58,7 @@
 // alternative to .gravatar
 a > img {
   position: relative;
-  top: 10px;
+  top: 5px;
 }
 .user_name {
   text-align: right;
